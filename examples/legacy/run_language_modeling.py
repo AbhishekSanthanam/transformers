@@ -270,7 +270,7 @@ def main():
 
     #special_tokens_dict = {'bos_token': '<BOS>', 'eos_token': '<EOS>', 'pad_token': '<PAD>'}
     special_tokens_dict = {'pad_token': '<PAD>'}
-    #num_added_toks = tokenizer.add_special_tokens(special_tokens_dict)
+    num_added_toks = tokenizer.add_special_tokens(special_tokens_dict)
     model.resize_token_embeddings(len(tokenizer))
 
     if config.model_type in ["bert", "roberta", "distilbert", "camembert"] and not data_args.mlm:
